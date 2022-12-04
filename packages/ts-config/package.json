@@ -1,0 +1,7 @@
+{
+  "name": "@ignite-ui/ts-config",
+  "version": "1.0.0",
+  "author": "Wilson Franca",
+  "license": "MIT",
+  "private": true
+}
