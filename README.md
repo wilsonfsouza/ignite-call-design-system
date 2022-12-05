@@ -59,3 +59,37 @@ Create a package `ts-config`
 
 ## React Package
 We installed react as a dev develpment because we expect the application that will use our package will have react already installed. Otherwise, it would considerably increase the bundle size of our package and create a react duplicate in the application that uses this package.
+
+## Storybook
+It has npm 7 dependency -> downgraded node to 16.10
+Created a separate folder/package for docs for the storybook setup, so the react components won't be dependent to storybook. This will be useful if I decide to change the doc tool later on.
+
+1. Install sb
+```cmd
+❯ npx sb init --builder @storybook/builder-vite --type react --use-npm
+```
+
+2. Instal additional dependencies (vite)
+
+```cmd
+❯ npm i -D vite @vitejs/plugin-react    
+```
+
+3. Create config file for sb `vite.config.js`
+- `/// <reference types="vite/client" />` => typescript will understand I am using vite, so it will release some global typing to be used
+```js
+/// <reference types="vite/client" />
+
+import react from "@vitejs/plugin-react"
+import {defineConfig} from 'vite'
+
+export default defineConfig({
+  plugins: [react()]
+})
+```
+
+4. Install `react` and `react-dom`
+
+```cmd
+❯ npm i react react-dom
+```
