@@ -93,3 +93,13 @@ export default defineConfig({
 ```cmd
 ❯ npm i react react-dom
 ```
+
+Troubleshoot eslint-config module not found
+
+```cmd
+// root
+npm i --workspace packages/ts-config 
+npm i --workspace packages/react 
+npm i --workspace packages/eslint-config 
+npm i --workspace packages/tokens 
+```
