@@ -103,3 +103,9 @@ npm i --workspace packages/react
 npm i --workspace packages/eslint-config 
 npm i --workspace packages/tokens 
 ```
+
+ColorPallete
+https://storybook.js.org/docs/react/writing-docs/doc-block-colorpalette
+
+Typeset for Typography
+https://storybook.js.org/docs/react/writing-docs/doc-block-typeset
