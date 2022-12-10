@@ -113,3 +113,17 @@ https://storybook.js.org/docs/react/writing-docs/doc-block-typeset
 
 # TurboRepo
 Needs git
+
+When to use:
+- When using Monorepo, it allows us to execute a script in all packages at the same time. Example: we need to run the script of `dev` for multiple packages (ex: react, docs, and tokens)
+- It helps to accelerate the build process. When we run the applications, turbo repo stores a local cache. The next time we run the applications, it will detect what changed, and only replace those changes.
+
+```cmd
+npm i turbo@latest -D
+```
+
+`schema` will add intelissence to our json
+
+`dependsOn: ^build`: it will run the build of dependecies of packages first; then, run the build of package that relies on other packages (ex: react build will execute after tokens, eslint, and ts-config have been built).
+
+With turbo repo, we can also store the cache of our build online. In that way, all the team members can use the same cached build (that will depend on the size of a project). [`remote caching`]
