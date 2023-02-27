@@ -9,13 +9,23 @@ export default {
     children: 'Submit',
   },
   argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'tertiary'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
     onClick: {
       action: 'click',
     },
   },
 } as Meta<ButtonProps>
 
-export const Primary: StoryObj<ButtonProps> = {}
+export const Primary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'primary',
+  },
+}
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
