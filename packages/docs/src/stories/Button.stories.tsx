@@ -7,10 +7,18 @@ export default {
   component: Button,
   args: {
     children: 'Submit',
+    variant: 'primary',
+    size: 'md',
   },
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
+      control: {
+        type: 'inline-radio',
+      },
+    },
+    size: {
+      options: ['sm', 'md'],
       control: {
         type: 'inline-radio',
       },
@@ -21,11 +29,7 @@ export default {
   },
 } as Meta<ButtonProps>
 
-export const Primary: StoryObj<ButtonProps> = {
-  args: {
-    variant: 'primary',
-  },
-}
+export const Primary: StoryObj<ButtonProps> = {}
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
