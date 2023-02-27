@@ -9,6 +9,7 @@ export default {
     children: 'Submit',
     variant: 'primary',
     size: 'md',
+    disabled: false,
   },
   argTypes: {
     variant: {
@@ -21,6 +22,11 @@ export default {
       options: ['sm', 'md'],
       control: {
         type: 'inline-radio',
+      },
+    },
+    disabled: {
+      control: {
+        type: 'boolean',
       },
     },
     onClick: {
