@@ -8,6 +8,7 @@
     "dev": "start-storybook -p 6006",
     "build": "build-storybook",
     "storybook": "start-storybook -p 6006",
+    "deploy-storybook": "storybook-to-ghpages",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
@@ -21,6 +22,7 @@
     "@storybook/addon-links": "^6.5.14",
     "@storybook/builder-vite": "^0.2.5",
     "@storybook/react": "^6.5.14",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@vitejs/plugin-react": "^2.2.0",
     "babel-loader": "^8.3.0",
