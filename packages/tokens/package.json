@@ -1,6 +1,6 @@
 {
-  "name": "@ignite-ui/tokens",
-  "version": "1.0.0",
+  "name": "@design-system-scheduler-ui/tokens",
+  "version": "2.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,8 +14,8 @@
   "author": "Wilson Franca",
   "license": "MIT",
   "devDependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/ts-config": "*",
+    "@design-system-scheduler-ui/eslint-config": "*",
+    "@design-system-scheduler-ui/ts-config": "*",
     "tsup": "6.2.3",
     "typescript": "^4.8.4"
   }

@@ -1,4 +1,4 @@
-import { colors } from '@ignite-ui/tokens'
+import { colors } from '@design-system-scheduler-ui/tokens'
 import { getContrast } from 'polished'
 
 function getColorByContrastRatio(color: string) {

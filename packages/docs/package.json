@@ -1,5 +1,6 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@design-system-scheduler-ui/docs",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,10 +30,10 @@
     "vite": "^3.2.4"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@design-system-scheduler-ui/eslint-config": "*",
+    "@design-system-scheduler-ui/react": "*",
+    "@design-system-scheduler-ui/tokens": "*",
+    "@design-system-scheduler-ui/ts-config": "*",
     "@storybook/addon-a11y": "^6.5.16",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",

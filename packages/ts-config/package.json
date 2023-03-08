@@ -1,6 +1,6 @@
 {
-  "name": "@ignite-ui/ts-config",
-  "version": "1.0.0",
+  "name": "@design-system-scheduler-ui/ts-config",
+  "version": "2.0.0",
   "author": "Wilson Franca",
   "license": "MIT",
   "private": true

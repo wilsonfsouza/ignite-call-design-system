@@ -8,7 +8,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@ignite-ui/tokens'
+} from '@design-system-scheduler-ui/tokens'
 
 export const {
   config,
