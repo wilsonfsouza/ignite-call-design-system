@@ -9,6 +9,13 @@ export const TextInputContainer = styled('div', {
   display: 'flex',
   alignItems: 'baseline',
 
+  variants: {
+    size: {
+      sm: {},
+      md: {},
+    },
+  },
+
   '&:has(input:focus)': {
     borderColor: '$ignite300',
   },
@@ -16,6 +23,10 @@ export const TextInputContainer = styled('div', {
   '&:has(input:disabled)': {
     opacity: 0.5,
     cursor: 'not-allowed',
+  },
+
+  defaultVariants: {
+    size: 'md',
   },
 })
 
