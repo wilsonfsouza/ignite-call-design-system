@@ -5,7 +5,7 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string
 }
 
-export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
+export const TextInput = forwardRef<ElementRef<'input'>, TextInputProps>(
   ({ prefix, ...props }: TextInputProps, ref) => {
     return (
       <TextInputContainer>

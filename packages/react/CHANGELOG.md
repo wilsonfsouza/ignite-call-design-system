@@ -1,5 +1,11 @@
 # @design-system-scheduler-ui/react
 
+## 2.0.2
+
+### Patch Changes
+
+- Replaced typeof Input with input in ElementRef inside TextInput component for bug fix
+
 ## 2.0.1
 
 ### Patch Changes
