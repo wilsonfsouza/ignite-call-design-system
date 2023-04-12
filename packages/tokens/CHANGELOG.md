@@ -1,5 +1,11 @@
 # @design-system-scheduler-ui/tokens
 
+## 2.1.1
+
+### Patch Changes
+
+- Added option to pass reference to TextInput and adjusted components styles
+
 ## 2.1.0
 
 ### Minor Changes
