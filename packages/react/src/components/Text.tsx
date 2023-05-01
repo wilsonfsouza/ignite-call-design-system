@@ -2,9 +2,10 @@ import { styled } from '@stitches/react'
 import { ComponentProps, ElementType } from 'react'
 
 export const Text = styled('p', {
-  fontFamily: '$default',
-  margin: 0,
   color: '$gray100',
+  fontFamily: '$default',
+  lineHeight: '$base',
+  margin: 0,
 
   variants: {
     size: {
@@ -22,23 +23,10 @@ export const Text = styled('p', {
       '8xl': { fontSize: '$8xl' },
       '9xl': { fontSize: '$9xl' },
     },
-    lineHeight: {
-      shorter: { lineHeight: '$shorter' },
-      short: { lineHeight: '$short' },
-      base: { lineHeight: '$base' },
-      tall: { lineHeight: '$tall' },
-    },
-    fontWeight: {
-      regular: { fontWeight: '$regular' },
-      medium: { fontWeight: '$medium' },
-      bold: { fontWeight: '$bold' },
-    },
   },
 
   defaultVariants: {
     size: 'md',
-    lineHeight: 'base',
-    fontWeight: '$regular',
   },
 })
 

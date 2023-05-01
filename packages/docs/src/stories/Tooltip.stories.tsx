@@ -35,7 +35,7 @@ export default {
 
 export const Primary: StoryObj<TooltipProps> = {
   args: {
-    children: <Text fontWeight="regular">25</Text>,
+    children: <Text>25</Text>,
     content: 'April 25 - Available',
   },
 }

@@ -1,7 +1,11 @@
 import React from 'react'
 import * as RadixTooltip from '@radix-ui/react-tooltip'
-import { TooltipArrow, TooltipContent, TooltipTrigger } from './styles'
-import { Text } from '../Text'
+import {
+  TooltipArrow,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipContentText,
+} from './styles'
 
 export interface TooltipProps {
   children: React.ReactNode
@@ -11,20 +15,13 @@ export interface TooltipProps {
 export function Tooltip({ children, content }: TooltipProps) {
   return (
     <RadixTooltip.Provider>
-      <RadixTooltip.Root open={true}>
+      <RadixTooltip.Root>
         <TooltipTrigger>
           <>{children}</>
         </TooltipTrigger>
         <RadixTooltip.Portal>
           <TooltipContent sideOffset={2}>
-            <Text
-              size="sm"
-              fontWeight="medium"
-              lineHeight="short"
-              style={{ letterSpacing: '-0.09px', color: '$gray100' }}
-            >
-              {content}
-            </Text>
+            <TooltipContentText>{content}</TooltipContentText>
             <TooltipArrow />
           </TooltipContent>
         </RadixTooltip.Portal>

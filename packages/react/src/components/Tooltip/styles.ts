@@ -75,6 +75,16 @@ export const TooltipContent = styled(RadixTooltip.Content, {
   },
 })
 
+export const TooltipContentText = styled('p', {
+  color: '$gray100',
+  fontFamily: '$default',
+  fontSize: '$sm',
+  fontWeight: '$medium',
+  letterSpacing: '-0.09px',
+  lineHeight: '$short',
+  margin: 0,
+})
+
 export const TooltipArrow = styled(RadixTooltip.Arrow, {
   fill: '$gray900',
 })

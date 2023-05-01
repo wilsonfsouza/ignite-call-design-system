@@ -1,5 +1,11 @@
 # @design-system-scheduler-ui/react
 
+## 2.1.1
+
+### Patch Changes
+
+- 1 - Removed lineHeight and fontWeight props from Text component. 2 - removed Tooltip content text dependency from Text component. 2.1 - removed prop open to always be true to let component state to work as intended"
+
 ## 2.1.0
 
 ### Minor Changes
