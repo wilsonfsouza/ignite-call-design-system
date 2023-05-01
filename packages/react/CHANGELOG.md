@@ -1,5 +1,11 @@
 # @design-system-scheduler-ui/react
 
+## 2.1.0
+
+### Minor Changes
+
+- New Features: 1 - Text component received props for line height and font weight; 2 - new tooltip component added
+
 ## 2.0.2
 
 ### Patch Changes

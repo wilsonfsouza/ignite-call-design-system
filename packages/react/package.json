@@ -1,6 +1,6 @@
 {
   "name": "@design-system-scheduler-ui/react",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -26,6 +26,7 @@
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.1",
     "@radix-ui/react-checkbox": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.5",
     "@stitches/react": "^1.2.8",
     "phosphor-react": "^1.4.1"
   }
