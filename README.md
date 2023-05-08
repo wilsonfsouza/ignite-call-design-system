@@ -1,129 +1,137 @@
-Design system is not a UI kit library. Design system won't include any component that we could have
-in more than 1 application. It will include only visual elements that can be reused in ALL applications in our company
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wilsonfsouza/ignite-call-design-system">
+  <a href="https://github.com/wilsonfsouza/happy-frontend-web/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wilsonfsouza/ignite-call-design-system">
+  </a>
 
-If we have visual elements that we understand that cannot be shared into any application, then we create a UI kit. (FielRoutes)
+  <a href="https://www.linkedin.com/in/wilsonfsouza/">
+    <img alt="Made by Wilson Franca" src="https://img.shields.io/badge/made%20by-Wilson%20Franca-%230AA186">
+  </a>
+</p>
 
-For example, the header of a website. Design system is a convention.
+<h1 align="center">
+    Ignite Call Design System
+</h1>
 
-In the future, we could have multiple UI kits (group of reusable components)
+<h4 align="center">
+  Table of contents
+</h4>
 
-# Components
-
-- [ ] Text -> standardizes font-family, size, color, etc
-- [ ] Heading -> standardizes font-family, size, color, etc
-- [ ] Box / Card
-- [ ] Button
-- [ ] TextInput
-- [ ] TextArea
-- [ ] Checkbox
-- [ ] Avatar
-- [ ] MultiStep - Form + Indicator
-
-
-Design system must be tech agnostic -> React, Vue, Angular, Svelte, etc
-Although the components might not be fully agnostic (it could if using `solidjs.com`),
-other things are, and should, be global. For example: tokens (fonts, sizes, spacing, font weight, etc)
-
-It's common to separate our design system into smaller packages
+<p align="center">
+ <a href="#-about-the-project">About</a> •
+ <a href="#user-content-️-features">Features</a> •
+ <a href="#-how-to-run-the-project">How to run</a> •
+ <a href="#-technologies">Technologies</a> •
+ <a href="#-author">Author</a>
+</p>
 
 
-## TSUP
-Converts our code in a js package that can be loaded by other apps (Bundle your TypeScript library with no config). It makes it easier to convert our package into both js and esm to be used by legacy and newer apps. If I used only the tsc to convert the ts package to js, I could limit who would be able to use this package.
+## 💻 About the project
 
-Tsup facilitates creating all typescript files (d.ts)
+Ignite Call UI is a design system for an online scheduling platform.
 
-https://github.com/egoist/tsup
+The design system uses `npm workspaces` to separate the documentation, react components, tokens, and typescript and eslint configuration in different packages.
 
-```terminal
-npm i tsup -D
+---
+
+## 🔥 Preview
+
+The documentation was deployed on Github pages using a CI/CD pipeline. To see the available tokens and components, see:
+<br />
+
+<a href="https://wilsonfsouza.github.io/ignite-call-design-system/?path=/story/home--page" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
+
+---
+
+## ⚙️ Features
+
+Components available:
+
+- Avatar
+- Button
+- Checkbox
+- Heading
+- MultiStep
+- Text
+- Textarea
+- TextInput
+- Toast (In Progress)
+- Tooltip
+
+---
+
+## 🚀 How to run the project
+
+### Requirements
+
+Initial requirements:
+[git](https://git-scm.com), [npm](https://nodejs.org/en), and a code editor of your choice.
+
+
+#### Running the application
+
+```bash
+# Clone this repository
+$ git clone git@github.com:wilsonfsouza/ignite-call-design-system.git
+
+# Access the folder in your terminal/cmd/cli
+$ cd ignite-call-design-system
+
+# Install all dependencies
+$ npm install
+
+# Start the app in development mode
+$ npm run dev
+
+# The storybook application will open at port:6006 - access http://localhost:6006/?path=/story/home--page
 ```
 
-Create 2 scripts on `package.json`
+---
 
-```json
-"build": "tsup src/index.ts --format esm,cjs --dts",
-"dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-```
+## 🛠 Technologies
 
-## Monorepo
-Add multiple projects within a repository (space of work/folder) that are dependent upon each other.
+The following tools were used in this project: 
 
-Example: react package in a design system will have the tokens package as a dependency. It allows us to import tokens into react package without having to publish a new npm package
+-   **[ESLint](https://eslint.org/)**
+-   **[Phospor Icons](https://phosphoricons.com/)**
+-   **[Radix UI](https://www.radix-ui.com/)**
+-   **[React](https://reactjs.org/)**
+-   **[Stiches](hhttps://stitches.dev/)**
+-   **[Storybook with vite](hhttps://storybook.js.org/)**
+-   **[Tsup](https://github.com/egoist/tsup)**
+-   **[Turborepo](https://turbo.build/)**
+-   **[TypeScript](https://www.typescriptlang.org/)**
+-   **[Uuid](https://www.npmjs.com/package/uuidv4)**
 
-https://docs.npmjs.com/cli/v7/using-npm/workspaces
+> See global and individual packages **package.json** file for more details
 
+> Use node version 16.10 to run this project
 
+---
 
-## TS Config sharable between multiple packages
-Create a package `ts-config`
+## 💪 How to contribute to this project
 
-## React Package
-We installed react as a dev develpment because we expect the application that will use our package will have react already installed. Otherwise, it would considerably increase the bundle size of our package and create a react duplicate in the application that uses this package.
-
-## Storybook
-It has npm 7 dependency -> downgraded node to 16.10
-Created a separate folder/package for docs for the storybook setup, so the react components won't be dependent to storybook. This will be useful if I decide to change the doc tool later on.
-
-1. Install sb
-```cmd
-❯ npx sb init --builder @storybook/builder-vite --type react --use-npm
-```
-
-2. Instal additional dependencies (vite)
-
-```cmd
-❯ npm i -D vite @vitejs/plugin-react    
-```
-
-3. Create config file for sb `vite.config.js`
-- `/// <reference types="vite/client" />` => typescript will understand I am using vite, so it will release some global typing to be used
-```js
-/// <reference types="vite/client" />
-
-import react from "@vitejs/plugin-react"
-import {defineConfig} from 'vite'
-
-export default defineConfig({
-  plugins: [react()]
-})
-```
-
-4. Install `react` and `react-dom`
-
-```cmd
-❯ npm i react react-dom
-```
-
-Troubleshoot eslint-config module not found
-
-```cmd
-// root
-npm i --workspace packages/ts-config 
-npm i --workspace packages/react 
-npm i --workspace packages/eslint-config 
-npm i --workspace packages/tokens 
-```
-
-ColorPallete
-https://storybook.js.org/docs/react/writing-docs/doc-block-colorpalette
-
-Typeset for Typography
-https://storybook.js.org/docs/react/writing-docs/doc-block-typeset
+1. **Fork** the project.
+2. Start a new branch with your changes: `git checkout -b my-new-feature`
+3. Save it and create a commit message describing what you have done: `git commit -m "feature: My new feature"`
+4. Send your alterations: `git push origin my-feature`
 
 
-# TurboRepo
-Needs git
+---
 
-When to use:
-- When using Monorepo, it allows us to execute a script in all packages at the same time. Example: we need to run the script of `dev` for multiple packages (ex: react, docs, and tokens)
-- It helps to accelerate the build process. When we run the applications, turbo repo stores a local cache. The next time we run the applications, it will detect what changed, and only replace those changes.
+## 👨‍💻 Author
 
-```cmd
-npm i turbo@latest -D
-```
+<br/>
+<h3 style="display: flex; align-items: center; justify-content: flex-start;">
+ <img style="border-radius: 50%; margin-right: 20px; width: 80px;" src="https://avatars0.githubusercontent.com/u/21347383?s=460&u=fdb399c92e369762d45d6495cbd2e87eef9e4d65&v=4" width="100px;" alt=""/>
+ <br />
+ <sub>Wilson Franca</sub></h3>
+ <br />
 
-`schema` will add intelissence to our json
+[![Linkedin Badge](https://img.shields.io/badge/-Wilson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wilsonfsouza/)](https://www.linkedin.com/in/wilsonfsouza/)
+[![Gmail Badge](https://img.shields.io/badge/-wilson.franca.92@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:wilson.franca.92@gmail.com)](mailto:wilson.franca.92@gmail.com)
 
-`dependsOn: ^build`: it will run the build of dependecies of packages first; then, run the build of package that relies on other packages (ex: react build will execute after tokens, eslint, and ts-config have been built).
+---
 
-With turbo repo, we can also store the cache of our build online. In that way, all the team members can use the same cached build (that will depend on the size of a project). [`remote caching`]
+Made with ❤️ by Wilson Franca 👋
+
