@@ -1,0 +1,2 @@
+import{A as t}from"./index.74a6f4cf.js";import"./index.3eddffe7.js";import"./iframe.0ada0824.js";import"./index.cd02b6b3.js";import"./jsx-runtime.5097a828.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/wilsonfsouza.png",alt:"Wilson Franca"},argTypes:{src:{control:{type:"text"}}}},p={},n={args:{src:void 0}},l=["Primary","WithFallback"];export{p as Primary,n as WithFallback,l as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.8f25701c.js.map
