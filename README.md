@@ -96,8 +96,8 @@ The following tools were used in this project:
 -   **[Phospor Icons](https://phosphoricons.com/)**
 -   **[Radix UI](https://www.radix-ui.com/)**
 -   **[React](https://reactjs.org/)**
--   **[Stiches](hhttps://stitches.dev/)**
--   **[Storybook with vite](hhttps://storybook.js.org/)**
+-   **[Stiches](https://stitches.dev/)**
+-   **[Storybook with vite](https://storybook.js.org/)**
 -   **[Tsup](https://github.com/egoist/tsup)**
 -   **[Turborepo](https://turbo.build/)**
 -   **[TypeScript](https://www.typescriptlang.org/)**
